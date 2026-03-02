@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DamascusBackground from "@/compnents/DamascusBackground";
+import DamascusBackground from "@/components/DamascusBackground";
 
 export default function DamascusPage() {
     return (
