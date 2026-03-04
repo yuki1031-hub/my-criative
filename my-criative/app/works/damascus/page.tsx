@@ -39,21 +39,23 @@ export default function DamascusPage() {
                             WebGL / GLSL
                         </p>
                         <h1 className="text-3xl font-bold text-white leading-snug tracking-tight">
-                            Digital Forge:<br />Damascus
+                            Liquid Steel:<br />Digital Forging of Damascus Steel
                         </h1>
                         <div className="mt-5 h-px w-10 bg-gradient-to-r from-blue-500 to-transparent" />
                     </div>
                     <div className="space-y-3 text-zinc-400 text-sm leading-relaxed">
                         <p>
-                            ダマスカス鋼とは、中世の刀剣に見られる独特の波紋模様を持つ鋼鉄であり、
-                            その製法は長らく謎に包まれていました。このシェーダーはその神秘的な紋様を、
-                            GLSLとWebGLで数学的に再現したものです。
+                            ダマスカス鋼——中世の刀剣に見られるその神秘的な波紋模様の真の製法は、現代においても完全には解明されておらず、
+                            歴史の謎に包まれています。本作品は、失われた「奇跡の鍛造技術」を、WebGLとGLSLの数学的アプローチによってブラウザ上で錬成（再現）したものです。
                         </p>
                         <p>
-                            内部ではドメインワーピング技法を用いた6オクターブのFBM（Fractional Brownian Motion）
-                            ノイズを多層合成し、有機的な流動感と金属光沢を表現しています。
-                            正弦波によるストライプ生成と、動的な時間変化によって、
-                            本物の刃紋が持つ複雑な揺らぎをリアルタイムで描写します。
+                            金属工学的な生成メカニズムそのもののシミュレーションに挑んでいます。
+                            結晶成長と析出： 溶けた鋼からデンドライト（樹枝状結晶）が成長する過程を、鋭いリッジを持つ7オクターブの absolute-noise fBm で形成。
+                            その隙間に析出するセメンタイト（$Fe_3C$）の粒子を Worley ノイズの閾値処理で配置しています。
+                            鍛造プロセスの模倣： 鍛冶屋が金属を幾度も叩き延ばす工程を、Y軸への強力なストレッチと2段階の蛇行ドメインワーピング（空間の歪曲）で表現し、微小な結晶を地層のような帯状の模様へと変換しました。
+                            エッチングと金属光沢： 最終工程である酸による腐食（エッチング）を、硬質帯（シルバー）と軟質谷（漆黒）の鮮烈なコントラストで可視化。有限差分による法線推定と Blinn-Phong 反射モデルを組み込みました。
+                            時間の経過とともに、結晶の成長、鍛造による流動、そして回転する光源からの鈍い反射が滑らかに連動します。
+                            まるで生きているかのように呼吸する「デジタルのダマスカス鋼」
                         </p>
                         <p className="text-zinc-600 text-xs font-mono">
                             Tech: Three.js · @react-three/fiber · GLSL
